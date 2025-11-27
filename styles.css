@@ -18,9 +18,106 @@ html {
     scroll-padding-top: 80px; /* Espacio para el header sticky */
 }
 
+/* Snap Container */
+.snap-container {
+    /* Disabled scroll snap for normal scrolling */
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 80px); /* Compensa header fijo (~80px) */
+    overscroll-behavior-y: contain;
+}
+
+.snap-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.snap-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.snap-container::-webkit-scrollbar-thumb {
+    background: #C0A15E;
+    border-radius: 4px;
+}
+
+.snap-container::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
 /* Page Sections */
 .page-section {
-    scroll-margin-top: 80px; /* Espacio para el header sticky */
+    /* Natural height (no forced vh) */
+    width: 100%;
+    scroll-margin-top: 80px; /* Evita que el header tape el inicio al navegar */
+}
+
+/* Hero (Presentación) professional background */
+.hero-pro-bg {
+    position: relative;
+    background: linear-gradient(130deg, rgba(24,32,44,0.98) 0%, rgba(34,46,60,0.94) 55%, rgba(192,161,94,0.24) 100%);
+    color: #fff;
+}
+.dark .hero-pro-bg {
+    background: linear-gradient(130deg, rgba(16,22,32,0.98) 0%, rgba(24,33,45,0.95) 55%, rgba(192,161,94,0.32) 100%);
+}
+.hero-pro-bg:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkYGD4z0AEYBxVSFcwCkbGgGhgqwagG4ZRo2EAAOJzA/4Ob2wXAAAAAElFTkSuQmCC") repeat;
+    opacity: .08;
+}
+.hero-pro-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero heading & text enhancements */
+.hero-heading {
+    font-size: clamp(2.2rem, 5vw + 0.5rem, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+}
+.text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+}
+.hero-sub {
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+    line-height: 1.3;
+}
+@media (prefers-reduced-motion: reduce) {
+    .portrait-frame div,[class*="hover:"] { transition: none !important; }
+}
+
+/* Portrait refinements - responsive */
+.portrait-frame {
+    max-width: 380px;
+    width: 100%;
+}
+.portrait-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border-radius: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .portrait-img {
+        border-radius: 1rem;
+    }
+}
+
+/* Section-level animation driven by IntersectionObserver */
+/* Entry animation removed */
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: #C0A15E;
+    font-weight: 700;
+    transform: scale(1.1);
 }
 
 @keyframes fadeIn {
@@ -53,10 +150,17 @@ html {
     justify-content: center;
     border-bottom: 3px solid transparent;
     white-space: nowrap;
-    padding-bottom: 13px;
-    padding-top: 1rem;
+    padding-bottom: 10px;
+    padding-top: 0.75rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .tab-link {
+        padding-bottom: 13px;
+        padding-top: 1rem;
+    }
 }
 
 .tab-link.active {
@@ -100,7 +204,7 @@ html {
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border: 1px solid #e0e0e0;
 }
 
@@ -110,7 +214,13 @@ html {
 }
 
 .service-card:hover {
+    transform: scale(1.10);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #C0A15E;
+}
+
+.dark .service-card:hover {
+    border-color: #C0A15E;
 }
 
 .service-card-image {
@@ -128,18 +238,7 @@ html {
     flex-grow: 1;
 }
 
-/* Sticky Header */
-.sticky-tabs {
-    position: sticky;
-    top: 0;
-    background-color: rgba(246, 246, 248, 0.8);
-    backdrop-filter: blur(12px);
-    z-index: 10;
-}
-
-.dark .sticky-tabs {
-    background-color: rgba(16, 22, 34, 0.8);
-}
+/* Sticky tabs removed: class no longer used */
 
 /* Nav Links */
 .nav-link {
@@ -244,9 +343,29 @@ html {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
     .service-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Additional responsive breakpoints for large screens */
+@media (min-width: 1920px) {
+    .service-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+/* Improve readability on very large screens */
+@media (min-width: 2560px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .hero-heading {
+        font-size: clamp(3rem, 4vw, 4.5rem);
     }
 }
 
@@ -276,3 +395,241 @@ html {
 .dark .tab-container::-webkit-scrollbar-thumb {
     background-color: #4b5563;
 }
+
+/* Keyframe Animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Floating WhatsApp Button Animation */
+.fixed.bottom-6.right-6 {
+    animation: slideInFromBottom 0.6s ease-out, float 3s ease-in-out infinite 1s;
+}
+
+/* Header Shadow on Scroll */
+header.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Badge Animations */
+.animate-badge-1 {
+    animation: slideInFromLeft 0.8s ease-out 0.3s both;
+}
+
+.animate-badge-2 {
+    animation: slideInFromLeft 0.8s ease-out 0.5s both;
+}
+
+.animate-badge-3 {
+    animation: slideInFromLeft 0.8s ease-out 0.7s both;
+}
+
+/* Image Hover Effects */
+img {
+    transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+}
+
+img:hover {
+    filter: brightness(1.05);
+}
+
+/* Card Lift Effect */
+.hover-lift {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Text Reveal */
+.text-reveal {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Footer Links Hover */
+footer a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #C0A15E;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Details/Summary Smooth Open */
+details summary {
+    transition: all 0.3s ease;
+}
+
+details[open] summary {
+    color: #C0A15E;
+}
+
+details > div {
+    animation: slideInFromBottom 0.3s ease-out;
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #C0A15E, #D4AF37, #C0A15E);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+}
+
+/* FAQ accordion cleanup */
+.bs-accordion .panel,
+.bs-accordion .panel-default,
+.bs-accordion .panel-group .panel,
+.bs-accordion .panel + .panel {
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 2px solid rgba(192, 161, 94, 0.35) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+.bs-accordion .panel:last-of-type {
+    border-bottom: 0 !important;
+}
+
+.bs-accordion .panel-heading,
+.bs-accordion .panel-collapse,
+.bs-accordion .panel-body,
+.bs-accordion .panel-title,
+.bs-accordion .panel-heading + .panel-collapse,
+.bs-accordion .panel-heading + .panel-collapse > .panel-body {
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+.bs-accordion .panel-collapse.collapse,
+.bs-accordion .panel-collapse.collapsing,
+.bs-accordion .panel-collapse.show {
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove focus outlines and borders from FAQ links */
+.bs-accordion .faq-toggle,
+.bs-accordion .faq-toggle:focus,
+.bs-accordion .faq-toggle:active,
+.bs-accordion .faq-toggle.collapsed {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+

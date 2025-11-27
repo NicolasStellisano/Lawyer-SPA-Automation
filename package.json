@@ -1,0 +1,28 @@
+{
+  "name": "lawyer-spa-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -p 5173 -c-1 .",
+    "test": "playwright test",
+    "test:visual": "playwright test",
+    "test:update": "playwright test --update-snapshots",
+    "test:ui": "playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasStellisano/Lawyer-SPA-Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasStellisano/Lawyer-SPA-Automation/issues"
+  },
+  "homepage": "https://github.com/NicolasStellisano/Lawyer-SPA-Automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "http-server": "^14.1.1"
+  }
+}

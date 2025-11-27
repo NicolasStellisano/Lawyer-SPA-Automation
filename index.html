@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Dra. Yanil Papaleo Merenda - Presentación</title>
+    <title>PM Abogados - Presentación</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -55,73 +55,120 @@
     </script>
 </head>
 <body class="font-display">
-    <div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-        <div class="layout-container flex h-full grow flex-col">
-            <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
-                <div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
-                    <!-- Header -->
-                    <header class="fixed top-0 left-0 right-0 z-20 bg-background-light dark:bg-background-dark border-b-2 border-primary-gold shadow-sm">
-                        <div class="px-4 md:px-10 lg:px-20 xl:px-40 mx-auto max-w-7xl">
-                            <div class="flex items-center justify-between py-4">
-                                <div class="flex items-center gap-3 text-gray-800 dark:text-white">
-                                    <img src="assets/yplogo.png" alt="Logo Dra. Yanil Papaleo Merenda" class="h-12 w-auto drop-shadow-lg brightness-110" />
-                                </div>
-                                <nav class="hidden md:flex flex-1 justify-end gap-8">
-                                    <div class="flex items-center gap-9">
-                                        <a class="nav-link text-sm font-bold leading-normal cursor-pointer transition-colors text-primary-gold" data-page="presentacion" href="#presentacion">Presentación</a>
-                                        <a class="nav-link text-sm font-medium leading-normal cursor-pointer transition-colors text-foreground-light dark:text-foreground-dark hover:text-primary-gold" data-page="servicios" href="#servicios">Servicios Legales</a>
-                                        <a class="nav-link text-sm font-medium leading-normal cursor-pointer transition-colors text-foreground-light dark:text-foreground-dark hover:text-primary-gold" data-page="contacto" href="#contacto">Contacto</a>
+    <div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+        <!-- Header (Fixed, outside snap container) -->
+        <header class="fixed top-0 left-0 right-0 z-20 bg-background-light dark:bg-background-dark border-b-2 border-primary-gold shadow-sm transition-all duration-300 backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
+                        <div class="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 mx-auto max-w-[1920px]">
+                            <div class="flex items-center justify-between py-3 sm:py-4">
+                                <a href="#presentacion" class="flex items-center gap-2 sm:gap-3 text-gray-800 dark:text-white transition-transform duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:rounded-lg hover:scale-105">
+                                    <img src="assets/yplogo.png" alt="Logo PM Abogados" class="h-10 sm:h-12 w-auto drop-shadow-lg brightness-110" />
+                                    <h2 class="text-foreground-light dark:text-foreground-dark text-base sm:text-lg font-bold leading-tight tracking-[-0.015em]">PM Abogados</h2>
+                                </a>
+                                <nav class="hidden lg:flex flex-1 justify-end gap-6 xl:gap-8">
+                                    <div class="flex items-center gap-5 xl:gap-7">
+                                        <a class="nav-link text-sm xl:text-base font-medium leading-normal cursor-pointer transition-all duration-300 text-foreground-light dark:text-foreground-dark hover:text-primary-gold hover:scale-105" data-page="presentacion" href="#presentacion">Inicio</a>
+                                        <a class="nav-link text-sm xl:text-base font-medium leading-normal cursor-pointer transition-all duration-300 text-foreground-light dark:text-foreground-dark hover:text-primary-gold hover:scale-105" data-page="about" href="#about">Sobre Nosotros</a>
+                                        <a class="nav-link text-sm xl:text-base font-medium leading-normal cursor-pointer transition-all duration-300 text-foreground-light dark:text-foreground-dark hover:text-primary-gold hover:scale-105" data-page="servicios" href="#servicios">Servicios</a>
+                                        <a class="nav-link text-sm xl:text-base font-medium leading-normal cursor-pointer transition-all duration-300 text-foreground-light dark:text-foreground-dark hover:text-primary-gold hover:scale-105" data-page="faq" href="#faq">FAQ</a>
                                     </div>
                                 </nav>
-                                <button id="mobile-menu-btn" class="md:hidden text-gray-800 dark:text-white">
-                                    <span class="material-symbols-outlined">menu</span>
+                                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 dark:text-white transition-transform duration-300 hover:scale-110 active:scale-95 p-2">
+                                    <span class="material-symbols-outlined transition-transform duration-300">menu</span>
                                 </button>
                             </div>
                         </div>
                     </header>
 
                     <!-- Mobile Menu -->
-                    <div id="mobile-menu" class="mobile-menu md:hidden fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg z-50">
-                        <div class="flex justify-end p-4">
-                            <button id="close-menu-btn" class="text-gray-800 dark:text-white">
-                                <span class="material-symbols-outlined">close</span>
+                    <div id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 w-72 sm:w-80 h-full bg-white dark:bg-gray-800 shadow-2xl z-50 transition-transform duration-300 ease-in-out">
+                        <div class="flex justify-end p-5">
+                            <button id="close-menu-btn" class="text-gray-800 dark:text-white p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined text-3xl">close</span>
                             </button>
                         </div>
-                        <nav class="flex flex-col gap-4 px-6">
-                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium" data-page="presentacion" href="#presentacion">Presentación</a>
-                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium" data-page="servicios" href="#servicios">Servicios Legales</a>
-                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium" data-page="contacto" href="#contacto">Contacto</a>
+                        <nav class="flex flex-col gap-5 px-8">
+                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium transition-all duration-300 hover:translate-x-2 hover:font-semibold" data-page="presentacion" href="#presentacion">Inicio</a>
+                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium transition-all duration-300 hover:translate-x-2 hover:font-semibold" data-page="about" href="#about">Sobre Nosotros</a>
+                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium transition-all duration-300 hover:translate-x-2 hover:font-semibold" data-page="servicios" href="#servicios">Servicios Legales</a>
+                            <a class="nav-link-mobile text-foreground-light dark:text-foreground-dark hover:text-primary-gold text-base font-medium transition-all duration-300 hover:translate-x-2 hover:font-semibold" data-page="faq" href="#faq">Preguntas Frecuentes</a>
                         </nav>
                     </div>
 
-                    <!-- Main Content -->
-                    <main class="flex-grow pt-20" id="main-content">
+                    <!-- Main Layout Container -->
+                    <div class="layout-container flex h-full flex-col pt-20">
+                        <!-- Snap Container -->
+                        <div class="snap-container flex-1 overflow-y-scroll">
+                            <!-- Main Content -->
+                            <main class="flex flex-col" id="main-content">
                         <!-- Presentación Section -->
-                        <section id="presentacion" class="page-section py-10 md:py-16">
-                            <div class="px-4 sm:px-10 w-full">
-                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                                    <div class="flex flex-col gap-6 text-center lg:text-left order-2 lg:order-1">
-                                        <div class="flex flex-col gap-4">
-                                            <h1 class="text-foreground-light dark:text-foreground-dark text-4xl md:text-5xl font-black leading-tight tracking-tight font-garamond">
-                                                Abogada Dra. Yanil Papaleo Merenda
-                                            </h1>
-                                            <h2 class="text-foreground-light/80 dark:text-foreground-dark/80 text-base md:text-lg font-normal leading-relaxed">
-                                                Comprometida con la excelencia y la defensa de sus derechos. Ofreciendo asesoramiento legal integral con profesionalismo, dedicación y un enfoque personalizado para cada caso.
-                                            </h2>
+                        <section id="presentacion" class="page-section hero-pro-bg flex items-center justify-center min-h-[85vh] sm:min-h-[80vh] py-8 sm:py-12 lg:py-16">
+                            <div class="hero-pro-inner mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 w-full max-w-[1920px]">
+                                <div class="grid grid-cols-1 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center justify-items-center lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+                                    <div class="flex flex-col gap-6 sm:gap-8 text-center lg:text-left order-2 lg:order-1 w-full">
+                                        <div class="flex flex-col gap-4 sm:gap-5">
+                                            <h1 class="hero-heading font-garamond font-extrabold text-white text-shadow-soft">PM Abogados</h1>
+                                            <p class="hero-sub font-semibold text-primary-gold text-shadow-soft">Dra. Yanil Papaleo Merenda</p>
+                                            <h2 class="text-white/80 text-sm sm:text-base lg:text-lg font-normal leading-relaxed text-shadow-soft max-w-3xl mx-auto lg:mx-0">Comprometida con la excelencia y la defensa de sus derechos. Ofreciendo asesoramiento legal integral con profesionalismo, dedicación y un enfoque personalizado para cada caso.</h2>
                                         </div>
                                         <div class="flex justify-center lg:justify-start">
-                                            <button class="btn-services inline-flex h-12 items-center justify-center rounded-lg bg-primary-gold px-6 text-base font-medium text-primary-content shadow transition-colors hover:bg-primary-gold/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2">
+                                            <button class="btn-services inline-flex h-11 sm:h-12 items-center justify-center rounded-lg bg-primary-gold px-6 sm:px-8 text-sm sm:text-base font-semibold text-primary-content shadow-lg transition-all duration-300 hover:bg-primary-gold/90 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2">
                                                 <span class="truncate">Conozca mis servicios</span>
                                             </button>
                                         </div>
+                                        <div class="grid grid-cols-1 gap-3 sm:gap-4 text-white/90 xl:grid-cols-3 xl:gap-5 w-full">
+                                            <div class="rounded-xl sm:rounded-2xl border border-white/20 bg-white/10 p-3 sm:p-4 xl:p-5 backdrop-blur-md shadow-lg overflow-hidden">
+                                                <div class="flex flex-col gap-2 sm:gap-3">
+                                                    <div class="flex items-center gap-2 min-w-0 w-full">
+                                                        <span class="material-symbols-outlined text-primary-gold text-[24px] sm:text-[28px] flex-shrink-0">gavel</span>
+                                                        <p class="text-sm sm:text-base font-semibold text-white break-words flex-1 min-w-0">Estrategia integral</p>
+                                                    </div>
+                                                    <p class="text-xs sm:text-sm text-white/80 leading-relaxed">Acompañamiento desde el diagnóstico inicial hasta la instancia judicial o extrajudicial final.</p>
+                                                </div>
+                                            </div>
+                                            <div class="rounded-xl sm:rounded-2xl border border-white/20 bg-white/10 p-3 sm:p-4 xl:p-5 backdrop-blur-md shadow-lg overflow-hidden">
+                                                <div class="flex flex-col gap-2 sm:gap-3">
+                                                    <div class="flex items-center gap-2 min-w-0 w-full">
+                                                        <span class="material-symbols-outlined text-primary-gold text-[24px] sm:text-[28px] flex-shrink-0">diversity_2</span>
+                                                        <p class="text-sm sm:text-base font-semibold text-white break-words flex-1 min-w-0">Red de especialistas</p>
+                                                    </div>
+                                                    <p class="text-xs sm:text-sm text-white/80 leading-relaxed">Articulamos peritos, escribanos y mediadores de confianza para resolver casos complejos.</p>
+                                                </div>
+                                            </div>
+                                            <div class="rounded-xl sm:rounded-2xl border border-white/20 bg-white/10 p-3 sm:p-4 xl:p-5 backdrop-blur-md shadow-lg overflow-hidden">
+                                                <div class="flex flex-col gap-2 sm:gap-3">
+                                                    <div class="flex items-center gap-2 min-w-0 w-full">
+                                                        <span class="material-symbols-outlined text-primary-gold text-[24px] sm:text-[28px] flex-shrink-0">insights</span>
+                                                        <p class="text-sm sm:text-base font-semibold text-white break-words flex-1 min-w-0">Seguimiento transparente</p>
+                                                    </div>
+                                                    <p class="text-xs sm:text-sm text-white/80 leading-relaxed">Reportes periódicos, acceso digital a documentos y comunicación prioritaria.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4 flex flex-col gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border border-white/20 bg-white/10 px-4 sm:px-6 py-4 sm:py-5 text-left text-white/90 shadow-xl backdrop-blur-md md:flex-row md:items-center md:justify-between w-full max-w-4xl mx-auto lg:mx-0">
+                                            <div class="flex items-center gap-2 sm:gap-3">
+                                                <span class="material-symbols-outlined text-primary-gold text-2xl sm:text-3xl flex-shrink-0">call</span>
+                                                <div class="min-w-0">
+                                                    <p class="text-xs sm:text-sm uppercase tracking-[0.15em] text-primary-gold">Coordinemos ahora</p>
+                                                    <a href="https://wa.me/5491168205340?text=Hola%20Dra.%20Yanil,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20legal.%20%C2%BFPodr%C3%ADa%20ayudarme%3F" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-white underline-offset-4 transition-colors duration-300 hover:text-primary-gold break-all sm:break-normal">+54 9 11 6820 5340</a>
+                                                </div>
+                                            </div>
+                                            <div class="hidden h-12 w-px bg-white/20 md:block"></div>
+                                            <div class="flex items-center gap-2 sm:gap-3">
+                                                <span class="material-symbols-outlined text-primary-gold text-2xl sm:text-3xl flex-shrink-0">mail</span>
+                                                <div class="min-w-0">
+                                                    <p class="text-xs sm:text-sm uppercase tracking-[0.15em] text-primary-gold">Escríbanos</p>
+                                                    <a href="mailto:contacto@pmabogados.com" class="text-sm sm:text-base font-semibold text-white underline-offset-4 transition-colors duration-300 hover:text-primary-gold break-all">contacto@pmabogados.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="order-1 lg:order-2 flex justify-center">
-                                        <div class="relative w-full max-w-xs lg:max-w-sm">
-                                            <div class="absolute inset-0 bg-primary-gold/20 rounded-2xl transform rotate-3"></div>
-                                            <img 
-                                                src="assets/priformal.jpg" 
-                                                alt="Retrato profesional de la Dra. Yanil Papaleo Merenda" 
-                                                class="relative w-full h-auto aspect-[3/4] object-cover rounded-2xl shadow-2xl border-4 border-white dark:border-gray-800"
+                                    <div class="order-1 lg:order-2 flex justify-center w-full">
+                                        <div class="portrait-frame relative w-full max-w-[280px] sm:max-w-xs md:max-w-sm">
+                                            <div class="absolute inset-0 bg-primary-gold/15 rounded-xl sm:rounded-2xl transform rotate-2 transition-transform duration-500 hover:rotate-3"></div>
+                                            <img
+                                                src="assets/priformal.jpg"
+                                                alt="Retrato profesional de la Dra. Yanil Papaleo Merenda"
+                                                class="portrait-img relative shadow-2xl border-2 sm:border-4 border-white dark:border-gray-800 transition-transform duration-500 hover:scale-105"
                                             />
                                         </div>
                                     </div>
@@ -129,50 +176,208 @@
                             </div>
                         </section>
 
+                        <!-- Sobre Nosotros Section -->
+                        <section id="about" class="page-section flex items-center justify-center bg-gradient-to-br from-card-light via-primary-gold/5 to-card-light dark:from-card-dark dark:via-primary-gold/10 dark:to-card-dark py-12 sm:py-16 lg:py-20">
+                            <div class="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 w-full max-w-[1920px]">
+                                <div class="grid gap-10 sm:gap-12 lg:gap-16 items-start lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+                                    <!-- Columna Izquierda: Título, Descripción y Valores -->
+                                    <div class="space-y-5 sm:space-y-6 lg:space-y-8 text-center lg:text-left">
+                                        <h2 class="font-garamond text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-gold text-center lg:text-left">
+                                            Sobre Nosotros
+                                        </h2>
+                                        <p class="text-foreground-light/90 dark:text-foreground-dark/90 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto lg:mx-0">
+                                            PM Abogados es un estudio jurídico especializado en brindar asesoramiento legal integral y soluciones efectivas en diversas áreas del derecho. Con sede en Buenos Aires, atendemos casos en toda la Provincia y Ciudad Autónoma de Buenos Aires.
+                                        </p>
+                                        <p class="text-foreground-light/90 dark:text-foreground-dark/90 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto lg:mx-0">
+                                            Nuestro compromiso es ofrecer un servicio personalizado, ético y de calidad, acompañando a nuestros clientes en cada etapa del proceso legal con profesionalismo y dedicación.
+                                        </p>
+                                        
+                                        <!-- Valores -->
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
+                                            <div class="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-background-light dark:bg-background-dark rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl sm:text-2xl mt-1 flex-shrink-0">verified</span>
+                                                <div>
+                                                    <h3 class="font-semibold text-foreground-light dark:text-foreground-dark mb-1 text-base sm:text-lg">Profesionalismo</h3>
+                                                    <p class="text-sm sm:text-base text-foreground-light/70 dark:text-foreground-dark/70 leading-relaxed">Atención especializada y compromiso con cada caso</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-background-light dark:bg-background-dark rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl sm:text-2xl mt-1 flex-shrink-0">gavel</span>
+                                                <div>
+                                                    <h3 class="font-semibold text-foreground-light dark:text-foreground-dark mb-1 text-base sm:text-lg">Ética Legal</h3>
+                                                    <p class="text-sm sm:text-base text-foreground-light/70 dark:text-foreground-dark/70 leading-relaxed">Transparencia y honestidad en cada asesoramiento</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-background-light dark:bg-background-dark rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl sm:text-2xl mt-1 flex-shrink-0">security</span>
+                                                <div>
+                                                    <h3 class="font-semibold text-foreground-light dark:text-foreground-dark mb-1 text-base sm:text-lg">Confidencialidad</h3>
+                                                    <p class="text-sm sm:text-base text-foreground-light/70 dark:text-foreground-dark/70 leading-relaxed">Total reserva y protección de su información</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-background-light dark:bg-background-dark rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl sm:text-2xl mt-1 flex-shrink-0">schedule</span>
+                                                <div>
+                                                    <h3 class="font-semibold text-foreground-light dark:text-foreground-dark mb-1 text-base sm:text-lg">Disponibilidad</h3>
+                                                    <p class="text-sm sm:text-base text-foreground-light/70 dark:text-foreground-dark/70 leading-relaxed">Respuesta rápida por WhatsApp e email</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Columna Derecha: Matrículas -->
+                                    <div class="space-y-5 sm:space-y-6 lg:space-y-8">
+                                        <!-- Matrículas -->
+                                        <div class="mx-auto w-full max-w-md lg:max-w-lg rounded-2xl sm:rounded-3xl border border-primary-gold/20 bg-background-light/80 dark:bg-card-dark/85 px-5 sm:px-7 py-6 sm:py-7 shadow-lg backdrop-blur-sm">
+                                            <div class="flex flex-col items-center gap-2 text-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-[32px] sm:text-[38px]">workspace_premium</span>
+                                                <p class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.28em] sm:tracking-[0.32em] text-primary-gold/70">Matrículas Vigentes</p>
+                                                <h3 class="font-garamond text-xl sm:text-2xl font-semibold text-foreground-light dark:text-foreground-dark">Habilitaciones Profesionales</h3>
+                                                <p class="text-sm sm:text-base text-foreground-light/70 dark:text-foreground-dark/65 leading-relaxed max-w-xs">
+                                                    Contamos con matrícula activa en las jurisdicciones clave donde asesoramos a nuestros clientes.
+                                                </p>
+                                            </div>
+                                            <div class="mt-5 sm:mt-6 space-y-3 sm:space-y-4">
+                                                <div class="flex items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border border-primary-gold/15 bg-white/70 dark:bg-gray-800/80 px-4 sm:px-5 py-3 sm:py-4 shadow-sm transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
+                                                    <span class="material-symbols-outlined text-primary-gold text-[32px] sm:text-[36px] lg:text-[40px] flex-shrink-0">location_on</span>
+                                                    <div class="min-w-0">
+                                                        <p class="font-semibold text-foreground-light dark:text-foreground-dark text-sm sm:text-base lg:text-lg">Ciudad Autónoma de Buenos Aires</p>
+                                                        <p class="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-foreground-light/60 dark:text-foreground-dark/60">Matrícula Profesional</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border border-primary-gold/15 bg-white/70 dark:bg-gray-800/80 px-4 sm:px-5 py-3 sm:py-4 shadow-sm transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
+                                                    <span class="material-symbols-outlined text-primary-gold text-[32px] sm:text-[36px] lg:text-[40px] flex-shrink-0">location_on</span>
+                                                    <div class="min-w-0">
+                                                        <p class="font-semibold text-foreground-light dark:text-foreground-dark text-sm sm:text-base lg:text-lg">Provincia de Buenos Aires</p>
+                                                        <p class="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-foreground-light/60 dark:text-foreground-dark/60">Matrícula Profesional</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Mapa de Cobertura
+                                        <div class="space-y-4">
+                                            <h3 class="font-garamond text-2xl font-semibold text-foreground-light dark:text-foreground-dark text-center">Buenos Aires</h3>
+                                            <div class="flex items-center justify-center">
+                                                <img 
+                                                    src="assets/buenos_aires.png" 
+                                                    alt="Mapa de Buenos Aires"
+                                                    class="w-full h-auto max-w-lg object-contain drop-shadow-xl"
+                                                />
+                                            </div>
+                                            <p class="text-sm text-center text-foreground-light/70 dark:text-foreground-dark/70">
+                                                Atendemos casos en toda la Provincia de Buenos Aires y Ciudad Autónoma de Buenos Aires
+                                            </p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                         <!-- Servicios Section -->
-                        <section id="servicios" class="page-section py-10 md:py-16">
+                        <section id="servicios" class="page-section min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-background-light via-background-light to-primary-gold/5 dark:from-background-dark dark:via-background-dark dark:to-primary-gold/10 py-8 sm:py-12 lg:py-16">
+                            <div class="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 w-full max-w-[1920px] min-h-[85vh] flex flex-col items-center justify-start">
                             <!-- Section Header -->
-                            <h2 class="text-foreground-light dark:text-foreground-dark text-3xl md:text-4xl font-bold leading-tight tracking-tight px-4 pb-3 pt-5 font-garamond text-center">Áreas de Práctica</h2>
+                            <h2 class="text-primary-gold text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight px-4 pb-2 sm:pb-3 pt-4 sm:pt-5 font-garamond text-center">Servicios Legales</h2>
                             
                             <!-- Body Text -->
-                            <p class="text-foreground-light/80 dark:text-foreground-dark/80 text-base md:text-lg font-normal leading-relaxed pb-8 md:pb-12 pt-1 px-4 text-center max-w-3xl mx-auto">
+                            <p class="text-foreground-light/80 dark:text-foreground-dark/80 text-sm sm:text-base lg:text-lg font-normal leading-relaxed pb-6 sm:pb-8 lg:pb-12 pt-1 px-4 text-center max-w-3xl mx-auto">
                                 Un resumen del enfoque profesional y el compromiso con los clientes, ofreciendo soluciones legales efectivas y personalizadas en diversas áreas del derecho.
                             </p>
                             
                             <!-- Tabs Navigation -->
-                            <div class="sticky-tabs pb-6 md:pb-8">
-                                <div class="tab-container flex border-b border-border-light dark:border-border-dark px-4 gap-4 md:gap-8 overflow-x-auto">
-                                    <a class="tab-link active" data-tab="civil" href="#civil">
-                                        <p class="text-sm font-bold leading-normal tracking-[0.015em]">Derecho Civil</p>
+                            <div class="pb-5 sm:pb-6 lg:pb-8 w-full">
+                                <div class="tab-container flex border-b border-border-light dark:border-border-dark px-2 sm:px-4 gap-3 sm:gap-4 lg:gap-8 overflow-x-auto">
+                                    <a class="tab-link active transition-all duration-300 hover:scale-105" data-tab="privado" href="#privado">
+                                        <p class="text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Derecho Privado</p>
                                     </a>
-                                    <a class="tab-link" data-tab="laboral" href="#laboral">
-                                        <p class="text-sm font-bold leading-normal tracking-[0.015em]">Derecho Laboral</p>
+                                    <a class="tab-link transition-all duration-300 hover:scale-105" data-tab="familia" href="#familia">
+                                        <p class="text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Derecho de Familia</p>
                                     </a>
-                                    <a class="tab-link" data-tab="familia" href="#familia">
-                                        <p class="text-sm font-bold leading-normal tracking-[0.015em]">Derecho de Familia</p>
+                                    <a class="tab-link transition-all duration-300 hover:scale-105" data-tab="sucesiones" href="#sucesiones">
+                                        <p class="text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Sucesiones</p>
                                     </a>
-                                    <a class="tab-link" data-tab="comercial" href="#comercial">
-                                        <p class="text-sm font-bold leading-normal tracking-[0.015em]">Derecho Comercial</p>
+                                    <a class="tab-link transition-all duration-300 hover:scale-105" data-tab="informaticos" href="#informaticos">
+                                        <p class="text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Delitos Informáticos</p>
+                                    </a>
+                                    <a class="tab-link transition-all duration-300 hover:scale-105" data-tab="ciudadanias" href="#ciudadanias">
+                                        <p class="text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">Ciudadanías</p>
                                     </a>
                                 </div>
                             </div>
                             
-                            <!-- Tab Content: Derecho Civil -->
-                            <div id="tab-civil" class="tab-content active">
-                                <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
+                            <!-- Tab Content: Derecho Privado -->
+                            <div id="tab-privado" class="tab-content active w-full">
+                                <!-- Mobile: Compact List View -->
+                                <div class="sm:hidden w-full px-3 space-y-2">
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">description</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Contratos</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Asesoramiento y redacción de contratos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">gavel</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Daños y Perjuicios</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Reclamos por daños materiales y morales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">home</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Derechos Reales</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Usucapión, hipotecas y derechos sobre inmuebles</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">handshake</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Obligaciones y Contratos</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Compraventa, locación y otros contratos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">balance</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Responsabilidad Civil</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Reclamos contractuales y extracontractuales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tablet & Desktop: Card Grid -->
+                                <div class="hidden sm:grid service-grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 xl:gap-8 p-3 sm:p-4 max-w-[1600px] mx-auto">
                                     <div class="service-card">
                                         <div class="service-card-image aspect-video" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJmGGlNAkweW4zNeN0zcyB8lPcyUz_7JFMl8Vw9VxwfqoEe1tjzX948DAZTq0qgPVh5PYSqSNa96vJ1JjmfxdQ1cQcyLcJB2c_kDB2nt2OGBUJfcc2MFKp2tJMNjSlBj1i_JbJ0lMzIXMS8gg_lLWbDstvQDyu7SwqcDj9LM0iZ_tnp5OIyoQIpS29WNQ7wYgEgOOr9rZXLUXfTKGdvz8zjuhGV3jHWXFGjleAudBhjH60UKLICKOrroiDvcdRWP6kFx4thF8u_-g");' data-alt="Abstract image representing legal contracts and documents."></div>
                                         <div class="service-card-content">
                                             <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Contratos</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento y redacción de todo tipo de contratos civiles y comerciales.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6r8h8ammkM83lkZqNmka4mzuib2TqDwJprwJjudQrU3glMmfQ1oD3ELm_vYUXqtPETmabcm6cmdE96rjMj5qzTph9jmblFkboz-6nYvTABEaKtV2AvOdOKt11xXLuJhPBStgi_7BH6VJSlDynuOpSv7KVJWINOX32Y1JssxVmo3Y2dNrzkuF_1jNHA3FD67c4R9qttQzK2lnfRhQZfJAlgQXa7iuwEJr_lKuDqzM3ZuaAZQlZ_QCcVTkm3JfkTt2Sc7r5YUz0LzM");' data-alt="Symbolic image of a family tree representing inheritance."></div>
-                                        <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Sucesiones</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Gestión integral de procesos sucesorios, declaratorias de herederos y testamentos.</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento y redacción de contratos civiles y comerciales.</p>
                                         </div>
                                     </div>
                                     
@@ -185,39 +390,112 @@
                                     </div>
                                     
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://documento.errepar.com/_next/image?url=https%3A%2F%2Fepcdn.errepar.com%2Fimagenes%2Factualidad%2F2025-09%2Faviso-desalojo-blog.png&w=1920&q=60");' data-alt="An empty apartment door, representing eviction processes."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800");' data-alt="Property law concept."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Desalojos</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Representación legal en procesos de desalojo por falta de pago u otras causales.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Derechos Reales</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Usucapión, servidumbres, hipotecas y otros derechos sobre inmuebles.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800");' data-alt="Business transactions."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Obligaciones y Contratos</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Compraventa, locación, comodato, mutuo y otros contratos del derecho privado.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800");' data-alt="Legal documentation."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Responsabilidad Civil</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Reclamos por responsabilidad contractual y extracontractual.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Tab Content: Derecho Laboral -->
-                            <div id="tab-laboral" class="tab-content" style="display: none;">
-                                <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
+                            <!-- Tab Content: Sucesiones -->
+                            <div id="tab-sucesiones" class="tab-content" style="display: none;">
+                                <!-- Mobile: Compact List View -->
+                                <div class="sm:hidden w-full px-3 space-y-2">
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">family_restroom</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Declaratoria de Herederos</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Reconocimiento de herederos legales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">assignment</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Testamentos</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Redacción de testamentos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">content_cut</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Partición de Herencia</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">División de bienes hereditarios</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">account_balance</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Administración de Sucesiones</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Gestión integral del proceso sucesorio</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tablet & Desktop: Card Grid -->
+                                <div class="hidden sm:grid service-grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");' data-alt="Workplace documents and contracts."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6r8h8ammkM83lkZqNmka4mzuib2TqDwJprwJjudQrU3glMmfQ1oD3ELm_vYUXqtPETmabcm6cmdE96rjMj5qzTph9jmblFkboz-6nYvTABEaKtV2AvOdOKt11xXLuJhPBStgi_7BH6VJSlDynuOpSv7KVJWINOX32Y1JssxVmo3Y2dNrzkuF_1jNHA3FD67c4R9qttQzK2lnfRhQZfJAlgQXa7iuwEJr_lKuDqzM3ZuaAZQlZ_QCcVTkm3JfkTt2Sc7r5YUz0LzM");' data-alt="Symbolic image of a family tree representing inheritance."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Despidos</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento en despidos justificados e injustificados, liquidaciones finales.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Declaratoria de Herederos</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Tramitación judicial para reconocer a los herederos legales.</p>
                                         </div>
                                     </div>
                                     
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800");' data-alt="Accident at workplace."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800");' data-alt="Testament documents."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Accidentes Laborales</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Representación en casos de accidentes de trabajo y enfermedades profesionales.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Testamentos</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento y redacción de testamentos ológrafos y por acto público.</p>
                                         </div>
                                     </div>
                                     
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800");' data-alt="Labor agreements and negotiations."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");' data-alt="Estate division."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Relaciones Laborales</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento en contratos de trabajo, convenios colectivos y negociaciones.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Partición de Herencia</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">División de bienes hereditarios entre coherederos.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800");' data-alt="Legal administration."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Administración de Sucesiones</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Gestión integral del proceso sucesorio y liquidación de bienes.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -225,7 +503,56 @@
                             
                             <!-- Tab Content: Derecho de Familia -->
                             <div id="tab-familia" class="tab-content" style="display: none;">
-                                <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
+                                <!-- Mobile: Compact List View -->
+                                <div class="sm:hidden w-full px-3 space-y-2">
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">heart_broken</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Divorcios</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Divorcios contenciosos y de mutuo acuerdo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">child_care</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Tenencia y Régimen de Visitas</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Tenencia de hijos y régimen de comunicación</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">payments</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Alimentos</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Cuotas alimentarias para hijos menores</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">shield</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Violencia Familiar</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Medidas de protección legal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tablet & Desktop: Card Grid -->
+                                <div class="hidden sm:grid service-grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
                                     <div class="service-card">
                                         <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800");' data-alt="Divorce documents."></div>
                                         <div class="service-card-content">
@@ -260,143 +587,590 @@
                                 </div>
                             </div>
                             
-                            <!-- Tab Content: Derecho Comercial -->
-                            <div id="tab-comercial" class="tab-content" style="display: none;">
-                                <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
+                            <!-- Tab Content: Delitos Informáticos -->
+                            <div id="tab-informaticos" class="tab-content" style="display: none;">
+                                <!-- Mobile: Compact List View -->
+                                <div class="sm:hidden w-full px-3 space-y-2">
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">credit_card_off</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Fraudes Digitales</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Estafas online y fraudes electrónicos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">privacy_tip</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Violación de Datos Personales</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Uso indebido de información personal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">person_off</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Robo de Identidad Digital</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Suplantación de identidad en redes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">warning</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Ciberacoso y Grooming</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Acoso digital y protección de menores</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tablet & Desktop: Card Grid -->
+                                <div class="hidden sm:grid service-grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800");' data-alt="Business meeting and contracts."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800");' data-alt="Cybersecurity concept."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Sociedades</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Constitución, modificación y disolución de sociedades comerciales.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Fraudes Digitales</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Denuncias y representación en casos de estafas online y fraudes electrónicos.</p>
                                         </div>
                                     </div>
                                     
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800");' data-alt="Business contracts."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800");' data-alt="Data protection."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Contratos Comerciales</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Redacción y revisión de contratos de distribución, franquicias y joint ventures.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Violación de Datos Personales</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Protección legal ante filtración o uso indebido de información personal.</p>
                                         </div>
                                     </div>
                                     
                                     <div class="service-card">
-                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800");' data-alt="Brand and trademark protection."></div>
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800");' data-alt="Identity theft."></div>
                                         <div class="service-card-content">
-                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Marcas y Patentes</p>
-                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Registro y defensa de marcas, patentes y propiedad intelectual.</p>
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Robo de Identidad Digital</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento y acciones legales ante suplantación de identidad en redes.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800");' data-alt="Cyberbullying."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Ciberacoso y Grooming</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Defensa legal en casos de acoso digital y protección de menores.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tab Content: Ciudadanías -->
+                            <div id="tab-ciudadanias" class="tab-content" style="display: none;">
+                                <!-- Mobile: Compact List View -->
+                                <div class="sm:hidden w-full px-3 space-y-2">
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">flag</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Ciudadanía Italiana</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Por descendencia y residencia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">flag</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Ciudadanía Española</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Gestión de nacionalidad española</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">public</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Otras Ciudadanías Europeas</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Portuguesa, alemana y otras de la UE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-card-light dark:bg-card-dark rounded-lg border border-primary-gold/20 overflow-hidden hover:border-primary-gold/40 transition-all">
+                                        <div class="flex items-center gap-3 p-3">
+                                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-primary-gold text-xl">search</span>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-foreground-light dark:text-foreground-dark text-sm font-bold leading-tight">Búsqueda de Antepasados</p>
+                                                <p class="text-foreground-light/70 dark:text-foreground-dark/70 text-xs leading-tight mt-0.5">Investigación genealógica</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tablet & Desktop: Card Grid -->
+                                <div class="hidden sm:grid service-grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 p-4">
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800");' data-alt="Travel and citizenship."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Ciudadanía Italiana</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Tramitación completa de ciudadanía italiana por descendencia y residencia.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800");' data-alt="Spanish citizenship."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Ciudadanía Española</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Gestión de trámites para obtener nacionalidad española.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800");' data-alt="Passport and documentation."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Otras Ciudadanías Europeas</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Asesoramiento para ciudadanías portuguesa, alemana y otras de la UE.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="service-card">
+                                        <div class="service-card-image aspect-video" style='background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");' data-alt="Legal documentation."></div>
+                                        <div class="service-card-content">
+                                            <p class="text-text-main dark:text-text-main-dark text-lg font-bold leading-normal">Búsqueda de Antepasados</p>
+                                            <p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal mt-1">Investigación genealógica para acreditar vínculos familiares.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- Contacto Section -->
-                        <section id="contacto" class="page-section py-10 md:py-16">
-                            <div class="w-full">
-                                <div class="container mx-auto px-4 md:px-6">
-                                    <div class="flex flex-col items-center space-y-4 text-center">
-                                        <h1 class="font-garamond text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary-gold">Contacto</h1>
-                                        <p class="max-w-[700px] text-foreground-light dark:text-foreground-dark md:text-xl">Envíe su consulta para discutir sus necesidades legales. Estoy aquí para ayudar.</p>
-                                    </div>
-                                    
-                                    <div class="mx-auto mt-12 grid max-w-5xl items-start gap-10 lg:grid-cols-2 lg:gap-12">
-                                        <!-- Contact Info -->
-                                        <div class="flex flex-col gap-8">
-                                            <div>
-                                                <h2 class="font-garamond text-3xl font-semibold text-foreground-light dark:text-foreground-dark">Contacto Directo</h2>
-                                                <p class="mt-2 text-foreground-light/80 dark:text-foreground-dark/80">Para consultas inmediatas, no dude en utilizar los siguientes medios.</p>
-                                            </div>
-                                            
-                                            <div class="space-y-6">
-                                                <div class="flex items-start gap-4">
-                                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-gold/10 text-primary-gold dark:bg-primary-gold/20">
-                                                        <span class="material-symbols-outlined text-2xl">call</span>
-                                                    </div>
-                                                    <div class="flex flex-col justify-center">
-                                                        <p class="font-semibold text-foreground-light dark:text-foreground-dark">Teléfono</p>
-                                                        <a class="text-foreground-light/80 hover:text-primary-gold dark:text-foreground-dark/80 dark:hover:text-primary-gold transition-colors" href="tel:+5491168205340">(0549) 11-6820-5340</a>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="flex items-start gap-4">
-                                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-gold/10 text-primary-gold dark:bg-primary-gold/20">
-                                                        <span class="material-symbols-outlined text-2xl">mail</span>
-                                                    </div>
-                                                    <div class="flex flex-col justify-center">
-                                                        <p class="font-semibold text-foreground-light dark:text-foreground-dark">Email</p>
-                                                        <a class="text-foreground-light/80 hover:text-primary-gold dark:text-foreground-dark/80 dark:hover:text-primary-gold transition-colors" href="mailto:drayanlipapaleo@gmail.com">drayanilpapaleo@gmail.com</a>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="flex items-start gap-4">
-                                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-gold/10 text-primary-gold dark:bg-primary-gold/20">
-                                                        <span class="material-symbols-outlined text-2xl">location_on</span>
-                                                    </div>
-                                                    <div class="flex flex-col justify-center">
-                                                        <p class="font-semibold text-foreground-light dark:text-foreground-dark">Ubicación</p>
-                                                        <p class="text-foreground-light/80 dark:text-foreground-dark/80">Buenos Aires</p>
-                                                    </div>
-                                                </div>
+                        <!-- FAQ Section -->
+                        <section id="faq" class="page-section flex items-center justify-center bg-gradient-to-br from-card-light via-primary-gold/5 to-card-light dark:from-card-dark dark:via-primary-gold/10 dark:to-card-dark py-8 sm:py-12 lg:py-16">
+                            <!-- Centered FAQ content box responsive widths -->
+                            <div class="mx-auto px-4 sm:px-6 w-[96vw] sm:w-[92vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] 2xl:w-[55vw] max-w-[1200px] flex flex-col justify-center">
+                                <h2 class="font-garamond text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-primary-gold mb-3 sm:mb-4">
+                                    Preguntas Frecuentes
+                                </h2>
+                                <p class="text-center text-foreground-light/70 dark:text-foreground-dark/70 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+                                    Respuestas a las consultas más comunes sobre nuestros servicios legales
+                                </p>
+                                <div class="bs-accordion panel-group flex flex-col overflow-hidden rounded-3xl border border-primary-gold/35 bg-gradient-to-br from-card-light/80 to-background-light/60 dark:from-card-dark/80 dark:to-background-dark/60 shadow-2xl" id="faqAccordion" role="tablist" aria-multiselectable="false">
+                                    <!-- FAQ Item 1 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading1">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1" class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none">
+                                                    <span class="flex-1 pr-4 text-left">¿Cómo puedo agendar una consulta?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse1" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading1" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Puede contactarnos directamente por WhatsApp al (0549) 11-6820-5340 o por email a <strong>contacto@pmabogados.com</strong>. Siempre respondemos dentro de las 24 horas hábiles.</p>
+                                                <p>Si prefiere, también puede solicitar una reunión completando el formulario de contacto. Coordinamos encuentros presenciales en CABA o Provincia de Buenos Aires y videollamadas seguras cuando resulte más práctico.</p>
+                                                <p>En la primera comunicación le pediremos sólo los datos esenciales; luego definiremos si necesitamos documentación adicional para un análisis más profundo.</p>
                                             </div>
                                         </div>
+                                    </section>
+
+                                    <!-- FAQ Item 2 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading2">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                                    <span class="flex-1 pr-4 text-left">¿Ofrecen consultas virtuales?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse2" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading2" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Sí, brindamos consultas presenciales y virtuales por videollamada (Google Meet o Zoom). Esta modalidad agiliza tiempos y evita traslados innecesarios.</p>
+                                                <p>La calidad del asesoramiento es la misma: antes del encuentro recibirá instrucciones claras y podrá compartir documentación digital de forma segura.</p>
+                                                <p>Ideal para clientes que se encuentran fuera de CABA, viajan con frecuencia o requieren seguimiento continuo.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FAQ Item 3 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading3">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                                    <span class="flex-1 pr-4 text-left">¿Trabajan con empresas o solo con particulares?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse3" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading3" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Atendemos a particulares, emprendedores, profesionales independientes, PyMEs y estructuras societarias más complejas.</p>
+                                                <p>Nuestro enfoque combina asesoramiento preventivo (contratos, cumplimiento normativo, protección de activos) con representación en conflictos judiciales o administrativos.</p>
+                                                <p>También acompañamos procesos de reorganización, negociación extrajudicial y mediaciones especializadas.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FAQ Item 4 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading4">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                                    <span class="flex-1 pr-4 text-left">¿En qué zonas operan?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse4" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading4" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Atendemos casos en toda la Ciudad Autónoma de Buenos Aires y la Provincia de Buenos Aires.</p>
+                                                <p>Contamos con matrícula habilitante en ambas jurisdicciones y red de corresponsales para gestiones puntuales en departamentos judiciales alejados.</p>
+                                                <p>Cuando corresponde, articulamos presentaciones electrónicas y audiencias remotas para optimizar tiempos procesales.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FAQ Item 5 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading5">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                                    <span class="flex-1 pr-4 text-left">¿Qué documentación necesito para la primera consulta?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse5" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading5" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Si ya tiene documentación (contratos, intimaciones, escrituras, denuncias, sentencias previas) es útil tenerla a mano.</p>
+                                                <p>No es obligatorio para iniciar: en la primera entrevista definimos el alcance real del asunto y luego le indicamos exactamente qué recopilar.</p>
+                                                <p>Para casos urgentes, priorizamos medidas iniciales y completamos el expediente con documentación complementaria posteriormente.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FAQ Item 6 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading6">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                                    <span class="flex-1 pr-4 text-left">¿Ofrecen planes de pago?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse6" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading6" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Sí. Diseñamos planes adaptados a la complejidad, duración estimada y etapas procesales del caso.</p>
+                                                <p>Puede optar por: anticipo + cuotas fijas, honorarios por hitos (medidas cautelares, audiencias, sentencia) o esquema mixto.</p>
+                                                <p>El presupuesto se explica con transparencia desde el inicio y se actualiza sólo si el alcance del trabajo se modifica sustancialmente.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- FAQ Item 7 -->
+                                    <section class="panel panel-default relative !border-0 !shadow-none transition-[background,box-shadow] duration-300 hover:bg-primary-gold/5 dark:hover:bg-primary-gold/10 focus-within:bg-primary-gold/10 focus-within:outline-none">
+                                        <div class="panel-heading !border-0 !shadow-none" role="tab" id="faqHeading7">
+                                            <h3 class="panel-title text-lg sm:text-xl lg:text-2xl font-bold text-foreground-light dark:text-foreground-dark">
+                                                <a class="faq-toggle collapsed flex w-full items-center justify-between gap-4 p-6 sm:p-7 lg:p-8 transition-all duration-300 hover:text-primary-gold focus:outline-none" role="button" data-toggle="collapse" data-parent="#faqAccordion" href="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                                                    <span class="flex-1 pr-4 text-left">¿Cuánto tiempo tarda en resolverse un caso?</span>
+                                                    <span class="faq-chevron material-symbols-outlined flex-shrink-0 text-2xl">chevron_right</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="faqCollapse7" class="panel-collapse faq-collapse !border-0" role="tabpanel" aria-labelledby="faqHeading7" aria-hidden="true">
+                                            <div class="panel-body px-6 sm:px-7 lg:px-8 pb-6 sm:pb-7 lg:pb-8 pt-1 text-foreground-light/80 dark:text-foreground-dark/80 leading-relaxed text-lg sm:text-xl lg:text-[1.25rem] space-y-4">
+                                                <p>Depende de la naturaleza jurídica y las instancias involucradas: procedimientos administrativos simples pueden resolverse en pocas semanas; litigios complejos se extienden meses o incluso años.</p>
+                                                <p>Factores influyentes: carga de trabajo del juzgado, necesidad de pericias, existencia de mediación previa, recursos de la contraparte y disponibilidad de prueba documental.</p>
+                                                <p>En la primera entrevista brindamos una estimación prudente y estrategias para acotar demoras (presentaciones inmediatas, medidas cautelares, acuerdos negociados).</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <!-- Integrated Footer under FAQ content -->
+                            <!-- Footer moved out of FAQ section -->
+                        </section>
+                    </main>
+                    <footer class="bg-card-light dark:bg-card-dark border-t-2 border-primary-gold/30 w-full">
+                                <div class="container mx-auto px-4 sm:px-10 max-w-7xl py-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
+                                        <!-- Columna 1: Logo y descripción -->
+                                        <div class="col-span-1 md:col-span-2">
+                                            <div class="flex items-center gap-3 mb-4">
+                                                <img src="assets/yplogo.png" alt="Logo PM Abogados" class="h-10 w-auto transition-transform duration-300 hover:scale-110" />
+                                                <h3 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">PM Abogados</h3>
+                                            </div>
+                                            <p class="text-sm text-foreground-light/70 dark:text-foreground-dark/70 mb-4 max-w-md">
+                                                Estudio jurídico especializado en Derecho Privado, Derecho de Familia, Sucesiones, Delitos Informáticos y Ciudadanías en Buenos Aires. <br>
+                                                Comprometidos con la excelencia y la defensa de sus derechos.
+                                            </p>
+                                        </div>
                                         
-                                        <!-- Contact Form -->
-                                        <div class="rounded-xl border border-border-light bg-card-light p-6 shadow-sm dark:border-border-dark dark:bg-card-dark sm:p-8">
-                                            <form id="contact-form" class="flex flex-col gap-6">
-                                                <h2 class="font-garamond text-3xl font-semibold text-foreground-light dark:text-foreground-dark">Formulario de Consulta</h2>
-                                                
-                                                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                                                    <div class="space-y-2">
-                                                        <label class="text-sm font-medium leading-none" for="contact-name">Nombre y Apellido</label>
-                                                        <input class="flex h-10 w-full rounded-md border border-border-light bg-transparent px-3 py-2 text-sm ring-offset-background-light file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground-light/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 dark:border-border-dark dark:ring-offset-background-dark dark:placeholder:text-foreground-dark/50" id="contact-name" placeholder="Ingrese su nombre completo" type="text" required/>
-                                                    </div>
-                                                    <div class="space-y-2">
-                                                        <label class="text-sm font-medium leading-none" for="contact-phone">Teléfono</label>
-                                                        <input class="flex h-10 w-full rounded-md border border-border-light bg-transparent px-3 py-2 text-sm ring-offset-background-light file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground-light/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 dark:border-border-dark dark:ring-offset-background-dark dark:placeholder:text-foreground-dark/50" id="contact-phone" placeholder="Ingrese su teléfono" type="tel"/>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="space-y-2">
-                                                    <label class="text-sm font-medium leading-none" for="contact-email">Email</label>
-                                                    <input class="flex h-10 w-full rounded-md border border-border-light bg-transparent px-3 py-2 text-sm ring-offset-background-light file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground-light/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 dark:border-border-dark dark:ring-offset-background-dark dark:placeholder:text-foreground-dark/50" id="contact-email" placeholder="Ingrese su email" type="email" required/>
-                                                </div>
-                                                
-                                                <div class="space-y-2">
-                                                    <label class="text-sm font-medium leading-none" for="contact-message">Mensaje</label>
-                                                    <textarea class="flex min-h-[120px] w-full rounded-md border border-border-light bg-transparent px-3 py-2 text-sm ring-offset-background-light placeholder:text-foreground-light/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 dark:border-border-dark dark:ring-offset-background-dark dark:placeholder:text-foreground-dark/50 resize-none" id="contact-message" placeholder="Escriba su consulta aquí..." rows="5" required></textarea>
-                                                </div>
-                                                
-                                                <button class="inline-flex h-12 items-center justify-center rounded-lg bg-primary-gold px-6 text-base font-medium text-primary-content shadow transition-colors hover:bg-primary-gold/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" type="submit">Enviar Consulta</button>
-                                                
-                                                <p class="text-xs text-center text-foreground-light/70 dark:text-foreground-dark/70">El envío de este formulario no constituye una relación abogado-cliente. Nos comunicaremos con usted a la brevedad.</p>
-                                            </form>
+                                        <!-- Columna 2: Enlaces rápidos -->
+                                        <div>
+                                            <h4 class="font-semibold text-foreground-light dark:text-foreground-dark mb-4 text-lg">Enlaces Rápidos</h4>
+                                            <ul class="space-y-2 text-sm">
+                                                <li><a href="#presentacion" class="text-foreground-light/70 dark:text-foreground-dark/70 hover:text-primary-gold transition-colors">Inicio</a></li>
+                                                <li><a href="#about" class="text-foreground-light/70 dark:text-foreground-dark/70 hover:text-primary-gold transition-colors">Sobre Nosotros</a></li>
+                                                <li><a href="#servicios" class="text-foreground-light/70 dark:text-foreground-dark/70 hover:text-primary-gold transition-colors">Servicios Legales</a></li>
+                                                <li><a href="#faq" class="text-foreground-light/70 dark:text-foreground-dark/70 hover:text-primary-gold transition-colors">Preguntas Frecuentes</a></li>
+                                                <li><a href="#contacto" class="text-foreground-light/70 dark:text-foreground-dark/70 hover:text-primary-gold transition-colors">Contacto</a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Columna 3: Contacto -->
+                                        <div>
+                                            <h4 class="font-semibold text-foreground-light dark:text-foreground-dark mb-4 text-lg">Contacto</h4>
+                                            <ul class="space-y-3 text-sm text-foreground-light/70 dark:text-foreground-dark/70">
+                                                <li class="flex items-start gap-2">
+                                                    <span class="material-symbols-outlined text-primary-gold text-base mt-0.5">location_on</span>
+                                                    <span>Buenos Aires, Argentina</span>
+                                                </li>
+                                                <li class="flex items-start gap-2">
+                                                    <span class="material-symbols-outlined text-primary-gold text-base mt-0.5">call</span>
+                                                    <a href="tel:+5491168205340" class="hover:text-primary-gold transition-colors">(0549) 11-6820-5340</a>
+                                                </li>
+                                                <li class="flex items-start gap-2">
+                                                    <span class="material-symbols-outlined text-primary-gold text-base mt-0.5">mail</span>
+                                                    <a href="mailto:contacto@pmabogados.com" class="hover:text-primary-gold transition-colors">contacto@pmabogados.com</a>
+                                                </li>
+                                                <li class="flex items-start gap-2">
+                                                    <span class="material-symbols-outlined text-primary-gold text-base mt-0.5">schedule</span>
+                                                    <span>Lun - Vie: 9:00 - 18:00 hs</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border-t border-border-light dark:border-border-dark pt-4">
+                                        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                                            <p class="text-sm text-foreground-light/60 dark:text-foreground-dark/60 text-center md:text-left">
+                                                © 2025 PM Abogados - Dra. Yanil Papaleo Merenda. Todos los derechos reservados.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </footer>
                         </section>
                     </main>
 
-                    <!-- Footer -->
-                    <footer class="flex flex-col gap-6 px-5 py-10 text-center border-t border-solid border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-wrap justify-center gap-4">
-                            <a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#" aria-label="LinkedIn">
-                                <img alt="linkedin" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSluid7eRjhY31E0fCeAuBsTq4_0HQFrhT3stzMViu001dZye9XEgOR2iwhcqCJ3uCPHCL6qpLRBZeQRGAvR6C4qrri5KKatt4ZUnPWko9HMJybPU4jSfmST3sNzx_SHE6fXb6Rg2S8UvFoVKUvvmjWhHjkY74OQH8XGtSQhP7WM5_ijVwFRWqgDVaRXI-LIW3_hXc6smI-pyQhvbZmvk15utVlZTq--Ogwz5B7mTQZABApWEPGWtLDgZZeMUQ4pFLR5AcXo7OnFM"/>
-                            </a>
-                            <a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#" aria-label="Twitter">
-                                <img alt="twitterx" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNhEACc5nIBa0gZ-_DWVWfRrhoLs8LlQfILkMJwffZB6gRpGNRuIxsQSiikd5CGCoRXfIqGojFFZvd-pjWepN14gQf_MEzsbDyq2KoTEWA7LQ6TkO3jhzQkiG10JW-KQ6oeYwPJpYUK0M88sSTV3m562B6TV4q6ByZ6mhdn1njyV3Z1P-nDJWG_6xt0UsUGXrIT7erf1WfuSKKwPi9hd59odLLxqn07kmWid524QRrfMMyCWJAA2N9brBUNaTzcYDfcysr5lExrgM"/>
-                            </a>
-                        </div>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">© 2025 Dra. Yanil Papaleo Merenda. Todos los derechos reservados.</p>
-                    </footer>
+                                <style>
+                                    .bs-accordion .panel-heading {
+                                        padding: 0;
+                                    }
+                                    .bs-accordion .panel-title a {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        gap: 1rem;
+                                        text-decoration: none;
+                                        color: inherit;
+                                    }
+                                    .bs-accordion .panel-title a .faq-chevron {
+                                        transition: transform 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
+                                    }
+                                    .bs-accordion .panel-title a[aria-expanded="true"] .faq-chevron {
+                                        transform: rotate(90deg);
+                                    }
+                                    .bs-accordion .panel {
+                                        transition: box-shadow 300ms ease, border-color 300ms ease;
+                                    }
+                                    .bs-accordion .panel.is-open {
+                                        border-color: rgba(192, 161, 94, 0.8);
+                                        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.12);
+                                    }
+                                    .bs-accordion .panel-collapse {
+                                        overflow: hidden;
+                                        max-height: 0;
+                                        opacity: 0;
+                                        transition: max-height 350ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 220ms ease-out;
+                                    }
+                                    .bs-accordion .panel-collapse.in {
+                                        opacity: 1;
+                                        max-height: 9999px;
+                                    }
+                                    @media (prefers-reduced-motion: reduce) {
+                                        .bs-accordion .panel-title a .faq-chevron,
+                                        .bs-accordion .panel,
+                                        .bs-accordion .panel-collapse {
+                                            transition: none;
+                                        }
+                                    }
+                                </style>
+
+                                <script>
+                                document.addEventListener('DOMContentLoaded', () => {
+                                    const triggers = Array.from(document.querySelectorAll('.bs-accordion [data-toggle="collapse"]'));
+                                    if (!triggers.length) return;
+
+                                    function getTargetSelector(trigger) {
+                                        return trigger.getAttribute('data-target') || trigger.getAttribute('href');
+                                    }
+
+                                    function getPanel(trigger) {
+                                        const selector = getTargetSelector(trigger);
+                                        if (!selector) return null;
+                                        try {
+                                            return document.querySelector(selector);
+                                        } catch (error) {
+                                            return null;
+                                        }
+                                    }
+
+                                    function getSection(panel) {
+                                        return panel ? panel.closest('.panel') : null;
+                                    }
+
+                                    function openPanel(panel, trigger) {
+                                        const section = getSection(panel);
+                                        panel.classList.add('in');
+                                        panel.setAttribute('aria-hidden', 'false');
+                                        panel.style.opacity = '1';
+                                        trigger.setAttribute('aria-expanded', 'true');
+                                        trigger.classList.remove('collapsed');
+                                        panel.style.maxHeight = `${panel.scrollHeight}px`;
+                                        if (section) {
+                                            section.classList.add('is-open');
+                                        }
+                                    }
+
+                                    function closePanel(panel, trigger) {
+                                        const section = getSection(panel);
+                                        panel.setAttribute('aria-hidden', 'true');
+                                        trigger.setAttribute('aria-expanded', 'false');
+                                        trigger.classList.add('collapsed');
+                                        panel.style.maxHeight = `${panel.scrollHeight}px`;
+                                        requestAnimationFrame(() => {
+                                            panel.classList.remove('in');
+                                            panel.style.maxHeight = '0px';
+                                            panel.style.opacity = '0';
+                                        });
+                                        if (section) {
+                                            section.classList.remove('is-open');
+                                        }
+                                    }
+
+                                    function closeSiblings(trigger) {
+                                        const parentSelector = trigger.getAttribute('data-parent');
+                                        if (!parentSelector) return;
+                                        const parent = document.querySelector(parentSelector);
+                                        if (!parent) return;
+                                        const activeTriggers = parent.querySelectorAll('[data-toggle="collapse"][aria-expanded="true"]');
+                                        activeTriggers.forEach((activeTrigger) => {
+                                            if (activeTrigger === trigger) return;
+                                            const activePanel = getPanel(activeTrigger);
+                                            if (activePanel) {
+                                                closePanel(activePanel, activeTrigger);
+                                            }
+                                        });
+                                    }
+
+                                    triggers.forEach((trigger) => {
+                                        const panel = getPanel(trigger);
+                                        if (!panel) return;
+
+                                        const section = getSection(panel);
+                                        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                                        if (expanded) {
+                                            panel.classList.add('in');
+                                            panel.setAttribute('aria-hidden', 'false');
+                                            panel.style.opacity = '1';
+                                            panel.style.maxHeight = `${panel.scrollHeight}px`;
+                                            if (section) {
+                                                section.classList.add('is-open');
+                                            }
+                                            trigger.classList.remove('collapsed');
+                                        } else {
+                                            panel.classList.remove('in');
+                                            panel.setAttribute('aria-hidden', 'true');
+                                            panel.style.opacity = '0';
+                                            panel.style.maxHeight = '0px';
+                                            trigger.classList.add('collapsed');
+                                            if (section) {
+                                                section.classList.remove('is-open');
+                                            }
+                                        }
+
+                                        trigger.addEventListener('click', (event) => {
+                                            event.preventDefault();
+                                            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+                                            if (isExpanded) {
+                                                closePanel(panel, trigger);
+                                            } else {
+                                                closeSiblings(trigger);
+                                                openPanel(panel, trigger);
+                                            }
+                                        });
+                                    });
+                                });
+                                </script>
+
+    <!-- Fixed WhatsApp Contact Card (Icon Only on Mobile) -->
+    <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
+        <a href="https://wa.me/5491168205340?text=Hola%20Dra.%20Yanil,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20legal.%20%C2%BFPodr%C3%ADa%20ayudarme%3F" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="group block">
+            <!-- Mobile: Icon Only -->
+            <div class="sm:hidden flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary-gold to-yellow-600 shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl active:scale-95">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+            </div>
+            
+            <!-- Tablet & Desktop: Full Card -->
+            <div class="hidden sm:block rounded-lg sm:rounded-xl border-2 border-primary-gold bg-gradient-to-br from-card-light to-background-light dark:from-card-dark dark:to-background-dark p-5 sm:p-6 lg:p-8 shadow-2xl max-w-[280px] sm:max-w-sm lg:max-w-md hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                <div class="flex flex-col items-center text-center space-y-4 sm:space-y-5 lg:space-y-6">
+                    <div class="flex h-16 w-16 sm:h-18 sm:w-18 lg:h-20 lg:w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary-gold to-yellow-600 shadow-lg">
+                        <svg class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-garamond text-lg sm:text-xl lg:text-2xl font-semibold text-foreground-light dark:text-foreground-dark mb-1 sm:mb-2">¿Necesita Asesoramiento?</h3>
+                        <p class="text-foreground-light/80 dark:text-foreground-dark/80 text-sm sm:text-base lg:text-lg">Contáctenos por WhatsApp</p>
+                    </div>
+                    
+                    <div class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-primary-gold to-yellow-600 px-5 sm:px-6 lg:px-7 py-2.5 sm:py-3 lg:py-3.5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 w-full">
+                        <svg class="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span class="truncate">Iniciar Conversación</span>
+                        <svg class="w-3 h-3 transition-transform group-hover:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </div>
                 </div>
             </div>
+        </a>
+    </div>
         </div>
     </div>
 
     <!-- JavaScript -->
     <script>
-        // SPA Navigation
+        // SPA Navigation & Active Section Detection
+        const snapContainer = document.querySelector('.snap-container');
         const sections = document.querySelectorAll('.page-section');
         const navLinks = document.querySelectorAll('.nav-link');
         const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
@@ -404,26 +1178,83 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
 
+        // Active section detection for nav highlighting only (simplified)
+
         function showSection(sectionId) {
             // Scroll to target section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-
-            // Update nav links
-            updateNavLinks(sectionId);
         }
 
         function updateNavLinks(activePage) {
             navLinks.forEach(link => {
                 const page = link.getAttribute('data-page');
                 if (page === activePage) {
-                    link.classList.remove('text-foreground-light', 'dark:text-foreground-dark', 'hover:text-primary-gold', 'font-medium');
-                    link.classList.add('text-primary-gold', 'font-bold', 'border-b-2', 'border-primary-gold', 'pb-1');
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
                 } else {
-                    link.classList.remove('text-primary-gold', 'font-bold', 'border-b-2', 'border-primary-gold', 'pb-1');
-                    link.classList.add('text-foreground-light', 'dark:text-foreground-dark', 'hover:text-primary-gold', 'font-medium');
+                    link.classList.remove('active');
+                    link.removeAttribute('aria-current');
+                }
+            });
+            navLinksMobile.forEach(link => {
+                const page = link.getAttribute('data-page');
+                if (page === activePage) {
+                    link.classList.add('text-primary-gold', 'font-bold');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.classList.remove('text-primary-gold', 'font-bold');
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        // Default highlight to the hero section
+        updateNavLinks('presentacion');
+
+        // Accessibility: convert service-card-image divs with data-alt into role="img"
+        document.querySelectorAll('.service-card-image[data-alt]').forEach(el => {
+            const label = el.getAttribute('data-alt');
+            if (label) {
+                el.setAttribute('role','img');
+                el.setAttribute('aria-label', label);
+            }
+        });
+
+        // IntersectionObserver to set active nav by section visibility
+        if (snapContainer && sections.length) {
+            const sectionVisibility = new Map();
+            let activeSectionId = 'presentacion';
+
+            const thresholds = Array.from({ length: 21 }, (_, idx) => idx / 20);
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    sectionVisibility.set(entry.target.id, entry.intersectionRatio);
+                });
+
+                let highestRatio = 0;
+                let mostVisibleId = activeSectionId;
+
+                sectionVisibility.forEach((ratio, sectionId) => {
+                    if (ratio > highestRatio) {
+                        highestRatio = ratio;
+                        mostVisibleId = sectionId;
+                    }
+                });
+
+                if (highestRatio > 0 && mostVisibleId !== activeSectionId) {
+                    activeSectionId = mostVisibleId;
+                    updateNavLinks(activeSectionId);
+                }
+            }, { root: snapContainer, threshold: thresholds });
+
+            sections.forEach(sec => {
+                if (sec.id) {
+                    sectionVisibility.set(sec.id, 0);
+                    io.observe(sec);
                 }
             });
         }
@@ -434,7 +1265,6 @@
                 e.preventDefault();
                 const page = link.getAttribute('data-page');
                 showSection(page);
-                window.history.pushState({page}, '', `#${page}`);
             });
         });
 
@@ -486,7 +1316,21 @@
             window.history.pushState({page: 'servicios'}, '', '#servicios');
         });
 
-        // Contact form
+        // FAQ accordion: close other details when one opens
+        const faqDetails = document.querySelectorAll('#faq details');
+        faqDetails.forEach((detail) => {
+            detail.addEventListener('toggle', () => {
+                if (detail.open) {
+                    faqDetails.forEach((otherDetail) => {
+                        if (otherDetail !== detail && otherDetail.open) {
+                            otherDetail.open = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        /* Contact form - Commented out for future use
         document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             
@@ -524,6 +1368,7 @@
                 alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente.');
             }
         });
+        */
 
         // Tabs functionality for Services section
         const tabLinks = document.querySelectorAll('.tab-link');
@@ -561,6 +1406,8 @@
                 showTab(tabId);
             });
         });
+
+        // AOS removed; no animation library initialization needed
     </script>
 </body>
 </html>
