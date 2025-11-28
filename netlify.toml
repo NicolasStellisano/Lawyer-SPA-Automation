@@ -1,0 +1,36 @@
+[build]
+  publish = "."  # Raíz del proyecto (index.html está aquí)
+  command = ""  # Vacío para HTML estático
+
+# Redirects (activar cuando tengas dominio custom)
+# [[redirects]]
+#   from = "https://www.ypabogados.com.ar/*"
+#   to = "https://ypabogados.com.ar/:splat"
+#   status = 301
+#   force = true
+
+# Headers de seguridad
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Deploy preview sin indexación
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+  # Solo aplica a todos los deploys por ahora (hasta tener dominio custom)
+
+# Build plugins (desactivados hasta producción)
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+#   
+#   [plugins.inputs]
+#     output_path = "reports/lighthouse.html"
+
+# [[plugins]]
+#   package = "netlify-plugin-image-optim"
