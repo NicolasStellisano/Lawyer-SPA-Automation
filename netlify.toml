@@ -2,7 +2,7 @@
   publish = "."  # Raíz del proyecto (index.html está aquí)
   command = ""  # Vacío para HTML estático
 
-# Proxy GA4 para evadir adblockers
+# GA4 Proxy para evadir adblockers (60-70% efectividad)
 [[redirects]]
   from = "/analytics.js"
   to = "https://www.googletagmanager.com/gtag/js?id=G-F44ET4RJSG"
@@ -10,7 +10,7 @@
   force = true
 
 [[redirects]]
-  from = "/ga-collect"
+  from = "/g/collect"
   to = "https://www.google-analytics.com/g/collect"
   status = 200
   force = true
