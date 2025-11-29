@@ -2,7 +2,20 @@
   publish = "."  # Raíz del proyecto (index.html está aquí)
   command = ""  # Vacío para HTML estático
 
-# Redirects (activar cuando tengas dominio custom)
+# Proxy GA4 para evadir adblockers
+[[redirects]]
+  from = "/analytics.js"
+  to = "https://www.googletagmanager.com/gtag/js?id=G-F44ET4RJSG"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ga-collect"
+  to = "https://www.google-analytics.com/g/collect"
+  status = 200
+  force = true
+
+# Redirects dominio custom (activar cuando tengas dominio)
 # [[redirects]]
 #   from = "https://www.ypabogados.com.ar/*"
 #   to = "https://ypabogados.com.ar/:splat"

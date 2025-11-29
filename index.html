@@ -5,15 +5,19 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>YP Abogados - Presentación</title>
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F44ET4RJSG"></script>
+    <!-- Google Analytics 4 (Proxied para evadir adblockers) -->
+    <script async src="/analytics.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-F44ET4RJSG', {
-        'cookie_flags': 'SameSite=None;Secure'
+        'cookie_flags': 'SameSite=None;Secure',
+        'transport_url': 'https://ypabogados.netlify.app/ga-collect'
       });
+      
+      // Log para verificar carga
+      console.log('✅ GA4 Proxied inicializado');
     </script>
     <!-- End Google Analytics 4 -->
     
@@ -1429,9 +1433,9 @@
         // 1. WhatsApp clicks
         document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(btn => {
             btn.addEventListener('click', () => {
-                gtag('event', 'whatsapp_click', {
-                    'event_category': 'contact',
-                    'event_label': btn.textContent.trim() || 'WhatsApp Button'
+                gtag('event', 'contacto_whatsapp', {
+                    'event_category': 'Conversión',
+                    'event_label': btn.textContent.trim() || 'Botón WhatsApp'
                 });
             });
         });
@@ -1439,9 +1443,9 @@
         // 2. Email/Phone clicks
         document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
             link.addEventListener('click', () => {
-                const type = link.href.startsWith('mailto:') ? 'email' : 'phone';
-                gtag('event', 'contact_click', {
-                    'event_category': 'contact',
+                const type = link.href.startsWith('mailto:') ? 'Email' : 'Teléfono';
+                gtag('event', 'contacto_email_telefono', {
+                    'event_category': 'Conversión',
                     'event_label': type,
                     'contact_method': link.href
                 });
@@ -1451,8 +1455,8 @@
         // 3. Service tabs
         tabLinks.forEach(tab => {
             tab.addEventListener('click', () => {
-                gtag('event', 'service_tab_view', {
-                    'event_category': 'engagement',
+                gtag('event', 'tab_servicios_legales', {
+                    'event_category': 'Interés',
                     'event_label': tab.textContent.trim(),
                     'tab_id': tab.getAttribute('data-tab')
                 });
@@ -1464,10 +1468,10 @@
             btn.addEventListener('click', () => {
                 const isOpen = btn.getAttribute('aria-expanded') === 'false';
                 const question = btn.querySelector('.panel-title')?.textContent.trim() || `FAQ ${index + 1}`;
-                gtag('event', 'faq_interaction', {
-                    'event_category': 'engagement',
+                gtag('event', 'consulta_faq', {
+                    'event_category': 'Interés',
                     'event_label': question,
-                    'action': isOpen ? 'open' : 'close',
+                    'action': isOpen ? 'abrir' : 'cerrar',
                     'faq_index': index + 1
                 });
             });
@@ -1476,87 +1480,66 @@
         // 5. Navigation clicks (desktop + mobile)
         [...navLinks, ...navLinksMobile].forEach(link => {
             link.addEventListener('click', () => {
-                gtag('event', 'navigation_click', {
-                    'event_category': 'navigation',
+                gtag('event', 'navegacion_sitio', {
+                    'event_category': 'Navegación',
                     'event_label': link.textContent.trim(),
                     'destination': link.getAttribute('data-page')
                 });
             });
         });
 
-        // 6. Scroll depth tracking
-        let scrollTracked = { '25': false, '50': false, '75': false, '100': false };
-        if (snapContainer) {
-            snapContainer.addEventListener('scroll', () => {
-                const scrollHeight = snapContainer.scrollHeight - snapContainer.clientHeight;
-                const scrollTop = snapContainer.scrollTop;
-                const percent = Math.round((scrollTop / scrollHeight) * 100);
-                
-                Object.keys(scrollTracked).forEach(threshold => {
-                    if (percent >= parseInt(threshold) && !scrollTracked[threshold]) {
-                        scrollTracked[threshold] = true;
-                        gtag('event', 'scroll_depth', {
-                            'event_category': 'engagement',
-                            'event_label': `${threshold}%`,
-                            'value': parseInt(threshold)
-                        });
-                    }
-                });
-            });
-        }
-
-        // 7. Mobile menu toggle
+        // 6. Mobile menu toggle
         mobileMenuBtn.addEventListener('click', () => {
-            gtag('event', 'mobile_menu_toggle', {
-                'event_category': 'navigation',
-                'event_label': 'open'
+            gtag('event', 'menu_mobile', {
+                'event_category': 'Navegación',
+                'event_label': 'Abrir menú'
             });
         });
 
         closeMenuBtn.addEventListener('click', () => {
-            gtag('event', 'mobile_menu_toggle', {
-                'event_category': 'navigation',
-                'event_label': 'close'
+            gtag('event', 'menu_mobile', {
+                'event_category': 'Navegación',
+                'event_label': 'Cerrar menú'
             });
         });
 
-        // 8. CTA button clicks
+        // 7. CTA button clicks
         document.querySelector('.btn-services').addEventListener('click', () => {
-            gtag('event', 'cta_click', {
-                'event_category': 'engagement',
+            gtag('event', 'boton_ver_servicios', {
+                'event_category': 'Interés',
                 'event_label': 'Conozca mis servicios',
                 'destination': 'servicios'
             });
         });
 
-        // 9. Service card clicks (desktop)
+        // 8. Service card clicks (desktop)
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('click', () => {
-                const serviceName = card.querySelector('.text-text-main, .text-foreground-light')?.textContent.trim() || 'Service';
-                gtag('event', 'service_card_click', {
-                    'event_category': 'engagement',
+                const serviceName = card.querySelector('.text-text-main, .text-foreground-light')?.textContent.trim() || 'Servicio';
+                gtag('event', 'ver_detalle_servicio', {
+                    'event_category': 'Interés',
                     'event_label': serviceName
                 });
             });
         });
 
-        // 10. Time on page tracking (every 30 seconds)
+        // 9. Time on page tracking (every 30 seconds)
         let timeOnPage = 0;
         setInterval(() => {
             timeOnPage += 30;
-            gtag('event', 'time_on_page', {
-                'event_category': 'engagement',
-                'event_label': `${timeOnPage} seconds`,
+            gtag('event', 'permanencia_sitio', {
+                'event_category': 'Engagement',
+                'event_label': `${timeOnPage} segundos`,
                 'value': timeOnPage
             });
         }, 30000);
 
-        // 11. Logo clicks
+        // 10. Logo clicks
         document.querySelectorAll('a[href="#presentacion"] img[alt*="Logo"]').forEach(logo => {
             logo.parentElement.addEventListener('click', () => {
-                gtag('event', 'logo_click', {
-                    'event_category': 'navigation',
-                    'event_label': 'Header logo'
+                gtag('event', 'volver_inicio', {
+                    'event_category': 'Navegación',
+                    'event_label': 'Logo header'
                 });
             });
         });
